@@ -6,6 +6,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.my-8 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 body {
     background-color: #e3edf7;
     height: 100vh;
@@ -15,19 +27,19 @@ body {
 }
 
 .skill {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     /*background-color: cornflowerblue; */
     position: relative;
 }
 
 .outer {
-    height: 160px;
-    width: 160px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    padding: 20px;
+    /* box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7); */
+    padding: 3px;
 
 }
 
@@ -35,29 +47,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
-    width: 120px;
+    height: 197px;
+    width: 197px;
     border-radius: 50%;
-    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    /* box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
     inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
     -0.5px -0.5px 0px rgba(255, 255, 255, 1),
     0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    0px 12px 10px -10px rgba(175, 124, 124, 0.05); */
 }
 
 #number {
     font-weight: 600px;
     color: #555;
+    content: '10';
+}
+p {
+    color: #555;
+}
 
+#numberContent::before {
+    animation: anim 1.5s linear forwards;
 }
 
 circle {
     fill: none;
     stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472; /* full is 472 */
-    stroke-dashoffset: 472;
-    animation: anim 2s linear forwards;
+    stroke-width: 6px;
+    stroke-dasharray: 615; /* full is 472 */
+    stroke-dashoffset: 615;
+    animation: anim 1.5s linear forwards;
 }
 svg {
     position: absolute;
@@ -66,6 +85,7 @@ svg {
 }
 
 @keyframes anim {
+   
     100% {
         stroke-dashoffset: 0;
     }
